@@ -1,6 +1,15 @@
-git init
-git add README.md
-git commit -m "first commit"
-git branch -M main
-git remote add origin https://github.com/AgDivyansh/-CrackYourPlacement.git
-git push -u origin main
+class Solution {
+public:
+    int removeDuplicates(vector<int>& nums) {
+        int ind = 0 ;
+        for (int i = 0 ; i < nums.size() ; i++)
+        {
+            if (nums[i] != nums[ind])
+            {
+                nums[ind+1] = nums[i] ;
+                ind++ ;
+            }
+        }
+        return ind+1 ;
+    }
+};
